@@ -1,0 +1,12 @@
+services:
+  oracle:
+    image: oracle/database:19.3.0-ee
+    container_name: oracle-xe
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_PWD: "gulbi123"
+      ORACLE_ALLOW_REMOTE: "true"
+    volumes:
+      - ./oracle-data:/opt/oracle/oradata
+    restart: always
