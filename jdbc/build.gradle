@@ -13,7 +13,7 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation 'com.oracle.database.jdbc:ojdbc17:23.9.0.25.07'
-    implementation 'com.zaxxer:HikariCP:5.0.1'
+    implementation("com.zaxxer:HikariCP:7.0.2")
 
 }
 

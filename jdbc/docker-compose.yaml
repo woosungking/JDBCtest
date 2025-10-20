@@ -10,3 +10,11 @@ services:
     volumes:
       - ./oracle-data:/opt/oracle/oradata
     restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '8.0'        # 최대 8코어 사용
+          memory: 16G        # 최대 16GB 메모리
+        reservations:
+          cpus: '4.0'        # 최소 4코어 예약
+          memory: 8G         # 최소 8GB 메모리 예약
